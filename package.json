@@ -1,0 +1,21 @@
+{
+  "name": "school-monitor",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Geospatial School Monitoring Platform - monorepo (API, Web Dashboard, Mobile App)",
+  "workspaces": [
+    "apps/api",
+    "apps/web",
+    "packages/shared"
+  ],
+  "scripts": {
+    "dev:api": "npm run start:dev --workspace=apps/api",
+    "dev:web": "npm run dev --workspace=apps/web",
+    "build:api": "npm run build --workspace=apps/api",
+    "build:web": "npm run build --workspace=apps/web",
+    "build:shared": "npm run build --workspace=packages/shared"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
