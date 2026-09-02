@@ -1,0 +1,32 @@
+{
+  "expo": {
+    "name": "School Monitor",
+    "slug": "school-monitor",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "splash": {
+      "backgroundColor": "#0f172a"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.schoolmonitor.app"
+    },
+    "android": {
+      "package": "com.schoolmonitor.app",
+      "permissions": ["ACCESS_FINE_LOCATION", "ACCESS_COARSE_LOCATION"]
+    },
+    "plugins": [
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Allow School Monitor to access your location to geo-tag field records."
+        }
+      ]
+    ],
+    "extra": {
+      "apiUrl": "https://school-monitorapi-production.up.railway.app/api/v1"
+    }
+  }
+}

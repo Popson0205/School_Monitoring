@@ -10,7 +10,8 @@ decision-making on material distribution, interventions, and rescue/security res
 apps/
   api/      NestJS backend (Prisma + PostgreSQL)
   web/      React + Vite + MapLibre dashboard (ministry/management decision-support UI)
-  mobile/   Expo (React Native) field data collection app — Phase 1 (not yet built)
+  mobile/   Expo (React Native) field data collection app - offline-first institution
+            registration and facility condition logging (see apps/mobile/README.md)
 packages/
   shared/   Shared TypeScript types/enums used across api/web/mobile
 ```
@@ -28,6 +29,9 @@ packages/
 - **Priority Dashboard**: institutions ranked by a computed urgency score
   (facility condition + missing critical infrastructure + open security incidents
   + enrollment size) — the core decision-support view for ministry/management users.
+- **Mobile field data collection** (Expo/React Native): institution registration and
+  facility condition logging with GPS capture, offline-first submission queue, and
+  auto-sync on reconnect. See `apps/mobile/README.md` for setup and EAS build instructions.
 
 PostGIS spatial queries (proximity search, catchment areas) are deferred to Phase 3;
 lat/lng are stored as plain floats for now.
