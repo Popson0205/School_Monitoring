@@ -65,7 +65,7 @@ jobs:
 
       - name: Verify the JS bundle is inside the built APK
         run: |
-          unzip -l apps/mobile/android/app/build/outputs/apk/release/app-release.apk | grep index.android.bundle \
+          unzip -l android/app/build/outputs/apk/release/app-release.apk | grep index.android.bundle \
             || (echo "::error::index.android.bundle is missing from the APK - the app will crash on launch." && exit 1)
 
       - name: Upload APK artifact
